@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void solution()
+int main()
 {
     // char : -128 ~ 127
     char char_min = numeric_limits<char>::min();
@@ -23,17 +23,4 @@ void solution()
     long long longlong_min = numeric_limits<long long>::min();
     long long longlong_max = numeric_limits<long long>::max();
     cout << "long long : " << longlong_min << " ~ " << longlong_max << '\n';
-}
-
-int main()
-{
-#ifdef LOCAL_DEBUG
-    freopen("input.txt", "r", stdin);
-#endif
-
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-    cout.tie(nullptr);
-
-    solution();
 }

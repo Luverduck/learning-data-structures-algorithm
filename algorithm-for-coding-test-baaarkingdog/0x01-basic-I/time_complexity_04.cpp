@@ -16,12 +16,7 @@ int func4(int N)
 
 int main()
 {
-#ifdef LOCAL_DEBUG
-    freopen("input.txt", "r", stdin);
-#endif
-
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-    cout.tie(nullptr);
-
+    int N = 10;
+    int res = func4(N);
+    cout << res;
 }

@@ -18,12 +18,8 @@ int func2(int arr[], int N)
 
 int main()
 {
-#ifdef LOCAL_DEBUG
-    freopen("input.txt", "r", stdin);
-#endif
-
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-    cout.tie(nullptr);
-
+    int arr[] { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
+    int N = 10;
+    int res = func2(arr, N);
+    cout << res;
 }

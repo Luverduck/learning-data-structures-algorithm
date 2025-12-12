@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void solution()
+int main()
 {
     // 1. 실수의 저장/연산 과정에서 반드시 오차가 발생한다.
     cout << "case 1 : ";
@@ -24,17 +24,4 @@ void solution()
     double q = 0.3;
     if (p == q) cout << "true";
     if (abs(p - q) < 1e-12) cout << "false";
-}
-
-int main()
-{
-#ifdef LOCAL_DEBUG
-    freopen("input.txt", "r", stdin);
-#endif
-
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-    cout.tie(nullptr);
-
-    solution();
 }

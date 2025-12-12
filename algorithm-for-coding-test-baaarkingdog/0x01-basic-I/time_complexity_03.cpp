@@ -7,7 +7,7 @@ using namespace std;
  *  N이 제곱수이면 1을 반환하고 제곱수가 아니면 0을 반환하는 함수 func3(int N)을 작성하라.
  *  N은 10억 이하의 자연수이다.
  */
-int func3(int arr[], int N)
+int func3(int N)
 {
     for (int i = 1; i * i <= N; ++i)
     {
@@ -18,12 +18,7 @@ int func3(int arr[], int N)
 
 int main()
 {
-#ifdef LOCAL_DEBUG
-    freopen("input.txt", "r", stdin);
-#endif
-
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-    cout.tie(nullptr);
-
+    int N = 9;
+    int res = func3(N);
+    cout << res;
 }
