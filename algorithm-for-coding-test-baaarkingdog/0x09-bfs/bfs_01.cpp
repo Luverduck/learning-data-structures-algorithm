@@ -9,24 +9,19 @@ using namespace std;
 int board[502][502];
 // 방문 여부를 저장할 배열
 bool vis[502][502];
+// 방문한 좌표를 저장할 queue
+queue<pair<int, int>> q;
 // 탐색 방향 지정을 위한 x, y의 좌표 보정값 배열
 int dx[4] {1, 0, -1, 0};
 int dy[4] {0, 1, 0, -1};
 
-int main()
-{
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-
+void solution() {
     // 탐색 범위 지정
     int n = 7, m = 10;
-
-    // 방문한 좌표를 저장할 queue
-    queue<pair<int, int>> q;
     // (0, 0)의 방문 여부를 1로 변경
     vis[0][0] = 1;
     // 방문한 위치를 queue에 저장
-    q.emplace(0, 0);
+    q.push({0, 0});
     // queue가 비어있을 때까지 진행
     while (!q.empty())
     {
@@ -47,7 +42,14 @@ int main()
             // 방향 좌표의 방문 여부를 1로 변경
             vis[nx][ny] = 1;
             // 방향 좌표를 queue에 저장
-            q.emplace(nx, ny);
+            q.push({nx, ny});
         }
     }
+}
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    solution();
 }
