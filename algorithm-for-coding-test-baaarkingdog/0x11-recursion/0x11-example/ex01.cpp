@@ -7,7 +7,7 @@ using namespace std;
  *  a^b mod m
  */
 
-int func1(long long a, long long b, long long m) {
+int recursion(long long a, long long b, long long m) {
     int val = 1;
     // 1에 a를 b번 곱한 후 나머지만 저장
     while (b--)
@@ -16,7 +16,7 @@ int func1(long long a, long long b, long long m) {
 }
 
 void solution() {
-    cout << func1(9, 2, 4);
+    cout << recursion(9, 2, 4);
 }
 
 int main()
