@@ -27,11 +27,16 @@ void backtracking(int k)
     // 1 ~ N까지 자연수 중 사용되지 않은 자연수 탐색
     for (int i = 0; i <= N; ++i)
     {
+        // i가 선택되지 않았던 자연수일 경우
         if (!isused[i])
         {
+            // 선택된 자연수 배열의 k번째 요소에 i 저장
             arr[k] = i;
+            // 자연수 i의 사용됨 표시
             isused[i] = true;
+            // 재귀 호출을 통해 k+1번째 자연수 선택
             backtracking(k + 1);
+            // 자연수 i의 사용됨 표시 해제
             isused[i] = false;
         }
     }
