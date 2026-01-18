@@ -21,23 +21,18 @@ void test()
     unordered_set<string>::iterator s_end_iter = s.end();
 
     // 요소 삽입 후 삽입 위치와 성공 여부의 pair 반환
-    // >> [ A, C, B, E, F, D ]
     pair<unordered_set<string>::iterator, bool> s_insert_pair = s.insert("D");
 
     // 특정 위치를 기준으로 탐색하여 요소 삽입
-    // >> [ A, C, B, E, F, D, G ]
     unordered_set<string>::iterator s_insert_iter = s.insert(s.end(), "G");
 
     // 요소 제거 후 제거한 요소의 수 반환
-    // >> [ A, C, B, E, D, G ]
     size_t s_erase = s.erase("F");
 
     // 요소 제거 후 제거한 요소의 다음 위치를 가리키는 반복자 반환
-    // >> [ A, B, C, D, E ]
     unordered_set<string>::iterator s_erase_iter = s.erase(s.find("G"));
 
     // 특정 요소의 수 반환
-    // >> 1
     size_t s_count = s.count("A");
 
     // 특정 요소의 위치를 가리키는 반복자 반환
@@ -47,7 +42,6 @@ void test()
     size_t s_size = s.size();
 
     // 모든 요소 비우기
-    // >> []
     s.clear();
 
     // 비어있는지 여부 반환
