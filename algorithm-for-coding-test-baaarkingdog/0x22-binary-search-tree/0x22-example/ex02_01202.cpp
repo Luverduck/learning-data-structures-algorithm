@@ -26,7 +26,6 @@ void solution()
         cin >> C;
         bags.emplace(C);
     }
-
     // 가치가 높은 보석부터 가방에 넣기
     long long res = 0;
     for (int i = N - 1; i >= 0; --i)
